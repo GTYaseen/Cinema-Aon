@@ -1,8 +1,5 @@
-.slideshow {
-    display: flex;
-    overflow: hidden;
-  }
-  
-  img {
-    width: 100%;
-  }
+
+.custom-carousel .slick-dots {
+  background-color: transparent; /* Active dot color */
+}
+

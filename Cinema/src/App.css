@@ -5,3 +5,10 @@
   font-family: sans-serif; 
   background-color: #051119; 
 }
+.app{
+  width: 100%;
+  height: 100vh;
+}
+.MovieCard{
+  display: grid;
+}
