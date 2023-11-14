@@ -3,3 +3,11 @@
   background-color: transparent; /* Active dot color */
 }
 
+#img{
+  height: 760px;
+  width: 100%;
+  color: #fff;
+  line-Height: 160px;
+  text-Align: center;
+  background: #364d79;
+}

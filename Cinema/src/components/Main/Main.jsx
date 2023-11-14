@@ -2,15 +2,6 @@ import React from "react";
 import { Carousel } from "antd";
 import "./Main.css"; 
 
-const contentStyle = {
-  height: "760px",
-  width: "100%",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
-
 function Main() {
   const images = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
@@ -23,7 +14,7 @@ function Main() {
     <Carousel autoplay className="custom-carousel">
       {images.map((imageUrl, index) => (
         <div key={index}>
-          <img src={imageUrl} alt={`slide-${index + 1}`} style={{ ...contentStyle, objectFit: "cover" }} />
+          <img id="img" src={imageUrl} alt={`slide-${index + 1}`} />
         </div>
       ))}
     </Carousel>
