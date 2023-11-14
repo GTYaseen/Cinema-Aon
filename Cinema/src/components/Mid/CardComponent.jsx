@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "antd";
-import "./card.css";
+import "./CardComponent.css";
 const { Meta } = Card;
 
 const cardData = [
@@ -23,23 +23,20 @@ const cardData = [
 function CardComponent() {
   return (
     <div className="Mcard">
-      {cardData.map((card, index) => (
-        <Card
-          key={index}
-          hoverable
-          style={{ width: 240, border: "none" }}
-          cover={<img alt="example" src={card.imageUrl} />}
-        >
-          <Meta title={card.title} />
-          <div className="CB">
-            <p>{card.date}</p>
-            <p>
-              <span>IMDB</span> {card.imdbRating}
-            </p>
-          </div>
-        </Card>
-      ))}
-    </div>
+    {cardData.map((card, index) => (
+      <Card
+        key={index}
+        hoverable
+        style={{ width: 240, border: "none" }}
+        cover={<img alt="example" src={card.imageUrl} />}
+      >
+        <Meta title={card.title} description={`IMDB: ${card.imdbRating}`} />
+        <div className="CB">
+          <p>{card.date}</p>
+        </div>
+      </Card>
+    ))}
+  </div>
   );
 }
 
