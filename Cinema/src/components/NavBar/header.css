@@ -50,3 +50,19 @@ img {
   border: none;
   display: block;
 }
+@media screen and (max-width: 720px) {
+  .search input {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 514px) {
+  .search input {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .search input {
+    width: 5rem;
+  }
+}
+
