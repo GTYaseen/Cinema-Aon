@@ -9,12 +9,15 @@
 .Mcard .content{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .card{
     width: 230px;
     height: 300px;
     margin: 100px auto;
+
 }
+
 .img{
     width: 230px;
     height: 300px;

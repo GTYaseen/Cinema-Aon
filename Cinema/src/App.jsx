@@ -6,8 +6,8 @@ import CardComponent from './components/Mid/CardComponent.jsx';
 
 function App() {
   const [apiData, setApiData] = useState([]);
+  const [queryUrl, setQueryUrl] = useState('');
   const fetchData = async () => {
-    const queryUrl = "game"; // Provide a search query
     const url = `https://www.omdbapi.com/?s=${queryUrl}&apikey=ef380c44`;
 
     try {
@@ -21,13 +21,13 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [queryUrl]);
 
   return (
     <>
       <div className="App">
-        <Header />
-        <Main />
+        <Header onSearch={setQueryUrl} />
+        <Main data={apiData}/>
         <CardComponent data={apiData} />
       </div>
     </>

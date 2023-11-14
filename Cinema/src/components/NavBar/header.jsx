@@ -5,19 +5,31 @@ import "./header.css";
 import logo from "../../assets/logo.svg";
 import search from "../../assets/search.svg";
 import X from "../../assets/x.svg";
-function Header() {
+function Header({ onSearch }) {
+  const[queryUrl, setQueryUrl] = React.useState('');
+  const handelSearch=()=>{
+    onSearch(queryUrl);
+    console.log(queryUrl);
+  }
+  const handelClear=()=>{
+    setQueryUrl('');
+    onSearch('');
+  }
+
   return (
     <div className="navbar">
       <div className="logo">
         <img src={logo} id="logo" alt="Logo" />
       </div>
       <div className="search">
-        <button><img src={search} alt="Search" /></button>
+        <button onClick={handelSearch}><img src={search} alt="Search" /></button>
         <input
           type="text"
           placeholder="Search movies & series"
+          value={queryUrl}
+          onChange={(e) => setQueryUrl(e.target.value)}
         />
-        <button ><img src={X} alt="Clear" id="x" /></button>
+        <button onClick={handelClear}><img src={X} alt="Clear" id="x" /></button>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import "./CardComponent.css";
 
 function CardComponent({ data }) {
-  return (
+ return (
     <div className="Mcard">
       {data.map((movie, index) => (
         <div className="card" key={index}>
