@@ -1,42 +1,24 @@
 import React from "react";
-import { Card } from "antd";
 import "./CardComponent.css";
-const { Meta } = Card;
 
-const cardData = [
-  {
-    title: "MovieName1",
-    date: "2020/4/21",
-    imdbRating: 7.8,
-    imageUrl: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-  },
-  // Add more objects for each card
-  // {
-  //   title: "MovieName2",
-  //   date: "2020/4/22",
-  //   imdbRating: 8.0,
-  //   imageUrl: "https://example.com/image2.jpg",
-  // },
-  // ...
-];
-
-function CardComponent() {
+function CardComponent({data}) {
   return (
     <div className="Mcard">
-    {cardData.map((card, index) => (
-      <Card
-        key={index}
-        hoverable
-        style={{ width: 240, border: "none" }}
-        cover={<img alt="example" src={card.imageUrl} />}
-      >
-        <Meta title={card.title} description={`IMDB: ${card.imdbRating}`} />
-        <div className="CB">
-          <p>{card.date}</p>
+      {data && data.search.map((result, index) => (
+        <div className="card" key={index}>
+          <div className="img">
+            <img src={result.Poster}/>
+          </div>
+          <div className="content">
+            <h1>{result.Title}</h1>
+            <div className="info">
+              <p>{result.Year}</p>
+              <p><span>IMDb</span> {result.imdbRating}</p>
+            </div>
+          </div>
         </div>
-      </Card>
-    ))}
-  </div>
+      ))}
+    </div>
   );
 }
 

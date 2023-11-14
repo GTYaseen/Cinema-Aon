@@ -1,19 +1,25 @@
 .Mcard{
-    max-width: 100%;
-    display: flex;
-    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     margin: 75px;
     margin-top: 100px;
-    gap: 20px;
-    overflow: hidden;
+    gap: 10px;
+    color: #fff;
 }
-.CB{
+.Mcard .content{
     display: flex;
-    justify-content: space-between;
-    padding-right: 5px;
+    flex-direction: column;
 }
-.CB p span{
-    background-color: #d29f08;
-    border-radius: 8px;
-    margin-right: 5px;
+.card{
+    width: 230px;
+    height: 300px;
+    margin: 100px auto;
+}
+.img{
+    width: 230px;
+    height: 300px;
+}
+.img img{
+    width: 230px;
+    height: 300px;
 }
