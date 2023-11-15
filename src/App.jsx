@@ -13,7 +13,7 @@ function App() {
     try {
       const response = await fetch(url);
       const result = await response.json();
-      setApiData(result.Search || []); // Use result.Search as the data array
+      setApiData(result.Search || []);
     } catch (error) {
       console.error(error);
     }
