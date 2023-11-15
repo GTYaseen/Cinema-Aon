@@ -11,7 +11,7 @@ function Header({ onSearch }) {
   }
   const handelClear=()=>{
     setQueryUrl('');
-    onSearch('');
+    onSearch('superman');
   }
 
   return (

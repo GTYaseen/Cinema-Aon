@@ -6,7 +6,7 @@ import CardComponent from './components/Mid/CardComponent.jsx';
 
 function App() {
   const [apiData, setApiData] = useState([]);
-  const [queryUrl, setQueryUrl] = useState('');
+  const [queryUrl, setQueryUrl] = useState("superman");
   const fetchData = async () => {
     const url = `https://www.omdbapi.com/?s=${queryUrl}&apikey=ef380c44`;
 
